@@ -55,7 +55,7 @@ function App() {
               <TodoList
                 className="list"
                 classNameDelete="delete"
-                classNameEdit="Edit"
+                classNameEdit="edit"
                 key={index}
                 id={index}
                 text={itemCur}
