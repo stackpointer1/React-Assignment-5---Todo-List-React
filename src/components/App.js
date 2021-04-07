@@ -1,8 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import EnterItem from "./inputitem";
+import ToDoLists from "./ToDolist";
+import EnterItem from "./inputItem";
+import "./../styles/App.css";
 
-import TodoList from "./TodoList";
 function App() {
   const [item, setItem] = useState("");
   const [itemArr, setItemArr] = useState([]);
@@ -11,19 +12,22 @@ function App() {
     setItem(event.target.value);
   };
 
-  const changeValue = () => {
+  const ChangeValue = () => {
     if (item.trim() !== "") {
       setItemArr([...itemArr, item]);
       setItem("");
     }
   };
-  const deleteitem = (id) => {
-    setItemArr((preValue) => {
-      return preValue.filter((itemArr, index) => {
+
+  const deletitem = (id) => {
+    // console.log("delete");
+    setItemArr((preValu) => {
+      return preValu.filter((arrEle, index) => {
         return index !== id;
       });
     });
   };
+
   const updateItem = (id, editValue) => {
     // console.log(id);
     // console.log(editValue);
@@ -37,31 +41,31 @@ function App() {
 
   return (
     <div id="main">
-      <div className="todoList">
+      <div className="center_div">
+        <br />
+        <h1>ToDo List</h1>
         <br />
         <EnterItem
-          type="text"
-          placeholder="enter the text"
           id="task"
+          type="text"
+          placeholder="Add a Item"
           value={item}
           onChange={itemValue}
         />
-        <button id="btn" onClick={changeValue}>
-          {" "}
+        <button id="btn" onClick={ChangeValue}>
           +
-          {" "}
         </button>
         <ol>
           {itemArr.map((itemCur, index) => {
             return (
-              <TodoList
+              <ToDoLists
                 className="list"
                 classNameDelete="delete"
                 classNameEdit="edit"
                 key={index}
                 id={index}
                 text={itemCur}
-                onSelect={deleteitem}
+                onSelect={deletitem}
                 onEdit={updateItem}
               />
             );
@@ -71,4 +75,5 @@ function App() {
     </div>
   );
 }
+
 export default App;
