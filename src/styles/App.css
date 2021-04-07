@@ -1,15 +1,15 @@
 h1 {
-    color: #27aedb;
+    color: #db27db;
     text-align: center;
     }
     
 
     button {
-        min-height: 20px;
+        min-height: 10px;
         width: 70px;
         /* border-radius: 50%; */
         border-color: transparent;
-        background-color: #8566aa;
+        background-color: #8d4022;
         color: white;
         font-size: 20px;
         border: none;
@@ -18,12 +18,13 @@ h1 {
         box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
         cursor: pointer;
       }
-      .todo_list{
-        width: 25%;
-        height: 80vh;
-        background-color: white;
-        box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5);
-        border-radius: 15px;
+    .todolist{
+        color:#fff;
+  width:300px;
+  background-color: #8566aa;
+  height:50px;
+  margin:20px auto;
+  border-radius:5px;
       }
       #main {
         width: 100%;
@@ -38,4 +39,12 @@ h1 {
 
 .bg-pink{
 	background-color:pink;
+}
+.list{
+  color: #fff;
+  width:300px;
+  background-color: blueviolet;
+  height:20px;
+  margin:20px,auto;
+  border-radius: 5px;;
 }
