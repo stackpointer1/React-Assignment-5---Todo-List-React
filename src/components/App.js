@@ -46,8 +46,8 @@ function App() {
           onChange={itemValue}
         />
         <button id="btn" onClick={changeValue}>
-          {" "}
-          +{" "}
+          
+          +
         </button>
         <ol>
           {itemArr.map((itemCur, index) => {

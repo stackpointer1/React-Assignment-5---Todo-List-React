@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
+
 const ToDoLists = (props) => {
   const [editInput, setEditInput] = useState("");
   const [addInEdit, setAddInEdit] = useState({
@@ -12,7 +13,7 @@ const ToDoLists = (props) => {
     setAddInEdit({ show: true });
   };
   const funEditUpdate = (event) => {
-    setEditInput(event.target.value.trim());
+    setEditInput(event.target.value);
   };
   return (
     <>
