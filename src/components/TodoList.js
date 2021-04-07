@@ -13,7 +13,7 @@ const ToDoLists = (props) => {
     setAddInEdit({ show: true });
   };
   const funEditUpdate = (event) => {
-    setEditInput(event.target.value);
+    setEditInput(event.target.value.trim());
   };
   return (
     <>
