@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import EnterItem from "./inputitem";
 
 import TodoList from "./TodoList";
 function App() {
@@ -38,7 +39,7 @@ function App() {
     <div id="main">
       <div className="todoList">
         <br />
-        <input
+        <EnterItem
           type="text"
           placeholder="enter the text"
           id="task"
