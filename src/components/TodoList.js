@@ -1,11 +1,11 @@
 import React from "react";
 import { useState } from "react";
-
+import "./../styles/App.css";
 
 const ToDoLists = (props) => {
   const [editInput, setEditInput] = useState("");
   const [addInEdit, setAddInEdit] = useState({
-    show: false
+    show: false,
   });
 
   const EditItem = () => {
